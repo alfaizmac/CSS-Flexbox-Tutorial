@@ -1,0 +1,56 @@
+* {
+  font-family: verdana;
+  margin: 0;
+}
+
+body {
+  background: #eee;
+}
+
+.wrapper {
+  width: 100%;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.flex-container {
+  display: flex;
+  background: white;
+
+  flex-wrap: wrap;
+}
+
+.box {
+  height: 100px;
+  /* min-width: 300px; */
+
+  /* instead of using min-width use flex-basis. this also avoid button scrollbar */
+  /* flex-basis: 500px; */
+
+  /* this take all the space of the container */
+  flex-grow: 1;
+
+  /* the container will shrink the bigger number when the browser get smaller. */
+  /* flex-shrink: 100; */
+
+  /* this combines all the flex properties 1 is the grow, 0 is the shrink, 200px is the basis. */
+  flex: 1 0 200px;
+}
+
+.one {
+  background: red;
+  /* flex-grow: 2; */
+  /* flex-shrink: 1; */
+}
+
+.two {
+  background: blue;
+  /* flex-grow: 3; */
+  /* flex-shrink: 2; */
+}
+
+.three {
+  background: green;
+  /* flex-grow: 1; */
+  /* flex-shrink: 3; */
+}
