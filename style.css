@@ -18,6 +18,15 @@ body {
   background: white;
 
   flex-wrap: wrap;
+
+  /* flex-flow is to be set to row or column wrap */
+  flex-flow: row;
+
+  /* this make the content in the middle of container */
+  justify-content: center;
+  align-items: center;
+
+  height: 800px;
 }
 
 .box {
@@ -28,13 +37,13 @@ body {
   /* flex-basis: 500px; */
 
   /* this take all the space of the container */
-  flex-grow: 1;
+  /* flex-grow: 1; */
 
   /* the container will shrink the bigger number when the browser get smaller. */
   /* flex-shrink: 100; */
 
   /* this combines all the flex properties 1 is the grow, 0 is the shrink, 200px is the basis. */
-  flex: 1 0 200px;
+  flex: 0 0 100px;
 }
 
 .one {
@@ -53,4 +62,34 @@ body {
   background: green;
   /* flex-grow: 1; */
   /* flex-shrink: 3; */
+}
+
+#blocks {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px;
+}
+
+#blocks div {
+  width: 100px;
+
+  /* this will fill the container if you put value on it */
+  flex: 0 0 100px;
+  color: #111;
+  text-align: center;
+  background-color: #ccc;
+  padding: 40px 0;
+}
+
+.one {
+  order: 1;
+}
+.two {
+  order: 2;
+}
+.three {
+  order: 1;
+}
+.four {
+  order: 4;
 }
